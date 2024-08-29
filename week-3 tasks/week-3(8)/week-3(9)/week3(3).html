@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" 
+          content="width=device-width">
+    <style>
+        .loader {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 160px; /* Increased size */
+            height: 160px; /* Increased size */
+        }
+
+        .loader-inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 160px; /* Increased size */
+            height: 160px; /* Increased size */
+            border-radius: 50%;
+            border: 8px solid rgba(0, 0, 0, 0.1); /* Adjusted border width */
+            border-top-color: #5CDB95;
+            background-image: 
+              linear-gradient(to right, #5CDB95, #8EE4AF, #ADD5A7);
+            animation: loader-spin 1.5s linear infinite;
+        }
+
+        .loader-inner::before {
+            content: "";
+            position: absolute;
+            top: 24px; /* Adjusted for larger size */
+            left: 24px; /* Adjusted for larger size */
+            width: 112px; /* Increased size */
+            height: 112px; /* Increased size */
+            border-radius: 50%;
+            background-size: 100%;
+            animation: loader-animation 2s infinite ease-in-out;
+        }
+
+        @keyframes loader-animation {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes loader-spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="loader">
+        <div class="loader-inner"></div>
+    </div>
+</body>
+
+</html>

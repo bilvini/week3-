@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Two-Column Layout with Clearfix</title>
+    <style>
+        .column {
+            float: left; /* Make both columns float */
+            width: 50%; /* Adjust the width as needed */
+            padding: 20px;
+        }
+
+        .left-column {
+            background-color: #f0f0f0;
+        }
+
+        .right-column {
+            background-color: #97e6c7;
+        }
+
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="clearfix">
+        <div class="column left-column">
+            <h2>Left Column</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+
+        <div class="column right-column">
+            <h2>Right Column</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    </div>
+</body>
+</html>

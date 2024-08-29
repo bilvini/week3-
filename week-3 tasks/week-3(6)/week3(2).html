@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Layout</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 200px 1fr; /* Adjust column widths as needed */
+            grid-template-rows: 80px 1fr 80px; /* Adjust row heights as needed */
+            min-height: 100vh;
+        }
+
+        .header {
+            grid-area: header;
+            background-color: #f0f0f0;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #f5f5f5;
+        }
+
+        .main-content {
+            grid-area: main;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: #f0f0f0;
+        }
+
+        .grid-item-1 {
+            grid-column: 1 / span 2; /* Span two columns */
+            grid-row: 1 / span 2; /* Span two rows */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="sidebar">Sidebar</div>
+        <div class="main-content">Main Content</div>
+        <div class="footer">Footer</div>
+        <div class="grid-item-1">Item 1 (spans 2 columns and 2 rows)</div>
+        <div class="grid-item-2">Item 2</div>
+        <div class="grid-item-3">Item 3</div>
+    </div>
+</body>
+</html>

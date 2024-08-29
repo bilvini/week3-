@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Moving Element Animation</title>
+<style>
+.moving-element {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: rgb(225, 0, 255);
+  animation: moveRight 2s linear infinite;
+}
+
+@keyframes moveRight {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+</style>
+</head>
+<body>
+<div class="moving-element"></div>
+</body>
+</html>
